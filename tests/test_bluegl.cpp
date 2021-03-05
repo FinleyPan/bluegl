@@ -35,6 +35,8 @@ TEST(BlueGLTest, GetVersion) {
     GLint major = 0, minor = 0;
     glGetIntegerv(GL_MAJOR_VERSION, &major);
     glGetIntegerv(GL_MINOR_VERSION, &minor);
+    //this symbol is missed
+    glActiveTexture(0);
 
     printf("OpenGL v%d.%d\n", major, minor);
     gl::destroyOpenGLContext(context);
